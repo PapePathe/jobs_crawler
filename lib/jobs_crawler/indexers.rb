@@ -1,0 +1,2 @@
+module JobsCrawler::Indexers
+end
