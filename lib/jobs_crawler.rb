@@ -7,9 +7,10 @@ require "jobs_crawler/indexers/pages_jaunes_senegal"
 
 module JobsCrawler
   def self.crawl
-    senjob  = Indexers::Senjob.new.crawl["links"]
-    pjaunes = Indexers::PagesJaunesSenegal.new.crawl["links"]
+    senjob         = Indexers::Senjob.new.crawl["links"]
+    pjaunes        = Indexers::PagesJaunesSenegal.new.crawl["links"]
+    emploi_senegal = Indexers::EmploiSenegal.new.crawl["links"]
 
-    senjob + pjaunes
+    senjob + pjaunes + emploi_senegal
   end
 end
