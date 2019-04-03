@@ -15,7 +15,7 @@ module JobsCrawler::Robots
      end
 
      def crawl_pages_jaunes_senegal(url)
-       JobsCrawler::Robots::EmploiSenegal.new(url).crawl
+       JobsCrawler::Robots::PagesJaunesSenegal.new(url).crawl
      end
   end
 end
