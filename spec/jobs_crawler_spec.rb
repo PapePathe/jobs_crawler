@@ -3,7 +3,7 @@ RSpec.describe JobsCrawler do
     expect(JobsCrawler::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "responds to crawl" do
+    is_expected.to respond_to(:crawl)
   end
 end

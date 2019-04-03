@@ -8,5 +8,9 @@ module JobsCrawler::Robots
      def crawl_atoo_job(url)
        JobsCrawler::Robots::AtooJob.new(url).crawl
      end
+
+     def crawl_emploi_senegal(url)
+       JobsCrawler::Robots::EmploiSenegal.new(url).crawl
+     end
   end
 end
