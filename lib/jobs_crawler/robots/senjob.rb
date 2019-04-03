@@ -1,9 +1,20 @@
 module JobsCrawler::Robots
-  class Senjob
-    include Wombat::Crawler
+  class Senjob < Base
+    def to_json
+      {
+        date_de_publication: date_de_publication,
+        description:         description
+      }
+    end
 
-    description "css=#articlebi .preview"
-    reference   "xpath=//html/body/div[3]/table/tbody/tr[5]/td[2]"
-    deadline    "css=body > div:nth-child(16) > table > tbody > tr:nth-child(5) > td:nth-child(2)"
+    private
+
+    def date_de_publication
+      @html.xpath('//*[@id="tablesOffres"]/tbody/tr[1]/td').text
+    end
+
+    def description
+      extract_content('#tablesOffres > tbody > tr:nth-child(1) > td')
+    end
   end
 end
