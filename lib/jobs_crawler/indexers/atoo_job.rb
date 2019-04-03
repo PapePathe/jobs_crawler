@@ -8,6 +8,7 @@ module JobsCrawler
     links 'css=.cs-post-title h5 a', :iterator do
       url({ xpath: ".//@href" })
       titre({ xpath: ".//text()" })
+      scraping_source('atoojob')
     end
   end
 end

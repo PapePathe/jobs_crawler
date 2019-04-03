@@ -13,6 +13,7 @@ module JobsCrawler
     links 'css=#les_offres table#offresenjobs a', :iterator do
       url({ xpath: ".//@href" })
       titre({ xpath: ".//text()" })
+      scraping_source('senjob')
     end
   end
 end

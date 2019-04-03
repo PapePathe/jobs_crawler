@@ -11,6 +11,7 @@ module JobsCrawler::Indexers
         'http://pagesjaunesdusenegal.com/' + u
       end
       titre({ xpath: ".//b" })
+      scraping_source('pagesjaunesdusenegal')
     end
   end
 end

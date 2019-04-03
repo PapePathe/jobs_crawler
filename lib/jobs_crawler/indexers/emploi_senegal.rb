@@ -8,6 +8,7 @@ module JobsCrawler
     links 'css=.search-results .job-description-wrapper', :iterator do
       url({ xpath: ".//@data-href" })
       titre({ xpath: ".//text()" })
+      scraping_source('emploisenegal')
     end
   end
 end
