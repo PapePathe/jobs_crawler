@@ -8,7 +8,7 @@ module JobsCrawler::Indexers
     ¬
     links "xpath=//a[contains(@href,'details-oe')]", :iterator do
       url({ xpath: ".//@href" }) do |u|
-        'http://pagesjaunesdusenegal.com/' + u
+        'http://pagesjaunesdusenegal.com/oe/' + u
       end
       titre({ xpath: ".//b" })
       scraping_source('pagesjaunesdusenegal')

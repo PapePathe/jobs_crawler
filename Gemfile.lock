@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jobs_crawler (0.1.7)
+    jobs_crawler (0.1.8)
       wombat
 
 GEM
